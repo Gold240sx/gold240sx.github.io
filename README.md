@@ -1,6 +1,6 @@
 # Readme 📕
 
-github location:
+github location: https://github.com/Gold240sx/pyramid-decoder
 hosted:
 
 Hey, Thanks for your time in overviewing my skill test submission and for the opportunity to challenge myself and work on this project!
@@ -24,4 +24,6 @@ I've also hosted this project on GitHub Pages. You can view the project by click
 ```
 
 I've left my hardcoded array in the compute.js file for your convenience. 😁
+
 # pyramid-decoder
+# gold240sx.github.io
