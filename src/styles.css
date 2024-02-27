@@ -1,0 +1,160 @@
+* {
+	box-sizing: border-box;
+}
+
+#form-container {
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	padding: 4rem;
+}
+
+#decoded-pop-up {
+	position: absolute;
+	display: none;
+	flex-direction: column;
+	z-index: 1;
+	background-color: white;
+	height: 100%;
+	width: 100%;
+	padding: 2rem;
+	gap: 3;
+}
+#decoded-pop-up h1 {
+	color: rgb(194, 194, 194);
+}
+
+#decoded-pop-up:last-child {
+	margin-inline: 2rem;
+}
+
+#decoded-answer {
+	background-color: black;
+	padding: 2rem;
+	border-radius: 14px;
+	color: greenyellow;
+}
+
+#num-pad {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	gap: 2px;
+	margin-block: 2rem;
+	margin-right: 0;
+}
+
+#num-pad button {
+	font-size: 2rem;
+	text-align: center;
+	padding-inline: 3rem;
+	border-radius: 12px;
+	border: 2px rgb(228 228 231) solid;
+	background-color: white;
+	transition: all 0.1s ease-in-out;
+}
+
+#num-pad button::selection {
+	background: transparent;
+}
+::-moz-selection {
+	background: transparent;
+}
+
+#num-pad button:hover {
+	background-color: rgb(244 244 245);
+	cursor: pointer !important;
+}
+
+#num-pad button:active {
+	background-color: rgb(212 212 216);
+	border-color: rgb(182, 182, 182);
+}
+
+#num-pad button #num-pad-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-self: center;
+	margin-inline: auto;
+}
+
+#mindblown {
+	font-size: 4rem;
+	text-align: center;
+	width: 100%;
+}
+
+label {
+	color: rgb(142, 142, 142);
+}
+
+.convertbtn {
+	background-color: rgb(13 148 136);
+	color: white;
+	border-radius: 12px;
+	border: none;
+	height: 100%;
+	width: 100%;
+	font-size: 30px;
+	padding-block: 1rem;
+	border: transparent solid 2px;
+}
+
+.convertbtn:hover {
+	background-color: rgb(9, 137, 126);
+	cursor: pointer;
+}
+.convertbtn:active {
+	background-color: rgb(8, 102, 94);
+	cursor: pointer;
+}
+
+#current-number {
+	color: rgb(11, 136, 121);
+	font-size: 32px;
+	border-radius: 12px;
+	border: rgb(219, 219, 219) solid 2px;
+	padding-block: 0.25rem;
+	padding-inline: 1rem;
+	width: 100%;
+	pointer-events: none !important;
+}
+
+#current-number::placeholder {
+	color: rgb(212, 237, 234);
+}
+
+#current-number:focus {
+	border: rgb(0, 188, 166) 2px solid;
+	outline: none;
+}
+
+#reset-btn {
+	padding-inline: 1rem;
+	position: absolute;
+	background-color: rgb(23, 224, 201);
+	border: none;
+	color: rgb(14, 80, 58);
+	font-weight: 600;
+	font-size: 20px;
+	border-radius: 12px;
+	margin: 0.5rem;
+	height: 68%;
+	right: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+#reset-btn:hover {
+	background-color: rgb(14, 80, 58);
+	cursor: pointer;
+	color: white;
+}
+
+/* Font */
+.roboto-regular {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}

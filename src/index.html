@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet" />
+		<link href="./styles.css" rel="stylesheet" type="text/css" />
+		<title>Decoder</title>
+	</head>
+	<body style="margin: 0; padding: 0" class="roboto-regular">
+		<div id="decoded-pop-up">
+			<h1>Your decoded answer:</h1>
+			<p id="decoded-answer">
+				<!-- decoded answer submitted displayed here via ui.js -->
+			</p>
+			<p style="margin-inline: 2rem">
+				This decrypted message will self destruct in 3 seconds
+			</p>
+		</div>
+
+		<div id="form-container">
+			<form
+				onsubmit="return false"
+				style="
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					width: fit-content;
+				">
+				<div style="position: relative">
+					<input
+						type="text"
+						id="current-number"
+						value="3, 6, 2, 4, 1, 5, 47, 29, 73, 49"
+						placeholder="Number" />
+					<button id="reset-btn" onclick="resetCurrentNum()">
+						X
+					</button>
+				</div>
+				<label
+					for="number-input"
+					class="roboto-regular"
+					style="
+						margin-top: 1rem;
+						text-align: center;
+						font-size: large;
+					">
+					Input your encoded message via the numpad
+				</label>
+				<p
+					class="roboto-regular"
+					style="color: rgb(181, 181, 181); margin-inline: 2rem">
+					Seperate each number with a comma. When you have completed
+					entering in your array of numbers, click the
+					<span
+						style="
+							background-color: rgb(13 148 136);
+							height: fit-content;
+							width: fit-content;
+							color: white;
+							padding: 2px;
+							padding-inline: 1rem;
+							border-radius: 5px;
+						"
+						>Convert</span
+					>
+					button!
+				</p>
+				<div id="num-pad-container">
+					<div id="num-pad">
+						<!-- num pad inserted here via ui.js -->
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<script src="compute.js" defer></script>
+		<script src="ui.js" defer></script>
+	</body>
+</html>
